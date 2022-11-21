@@ -1,0 +1,106 @@
+.winned_wrapper {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.701);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bottom_img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 11;
+}
+
+.bottom_img img {
+  width: 100%;
+  height: 500px;
+}
+.winned_summ {
+  position: relative;
+  z-index: 111;
+  margin-top: 250px;
+}
+
+.winned_summ h1 {
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
+    0 0 0.1em #ff4444, 0 10px 3px #000;
+  font-size: 60px;
+  position: relative;
+  z-index: 111;
+}
+
+.retry_btn p {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: absolute;
+  z-index: 141;
+  left: 20%;
+}
+.retry_btn p:hover {
+  color: #ff4444;
+  transition: all 0.4s ease;
+}
+
+.falling_coins {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 140;
+}
+.falling_coins img {
+  position: absolute;
+  z-index: 140;
+  width: 100%;
+  height: 100%;
+}
+.first_line img {
+  animation: fall1 0.5s linear infinite;
+}
+.second_line img {
+  animation: fall2 1s linear infinite;
+}
+.thirst_line img {
+  animation: fall3 1.5s linear infinite;
+}
+
+@keyframes fall1 {
+  0% {
+    transform: translateY(-300px);
+  }
+
+  100% {
+    transform: translateY(900px);
+  }
+}
+
+@keyframes fall2 {
+  0% {
+    transform: translateY(-600px);
+  }
+
+  100% {
+    transform: translateY(1500px);
+  }
+}
+@keyframes fall3 {
+  0% {
+    transform: translateY(-900px);
+  }
+
+  100% {
+    transform: translateY(2100px);
+  }
+}

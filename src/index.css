@@ -1,0 +1,164 @@
+@import url(//fonts.googleapis.com/css?family=Vibur);
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(rgba(24, 24, 24, 0.666), rgba(16, 15, 15, 0.627)),
+    url(./assets/sss.jfif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#wheel {
+  margin: 0 auto;
+  padding-top: 180px;
+  padding-left: 400px;
+  background: transparent;
+  border: none;
+  width: 100px;
+  border-radius: 50%;
+  height: 308px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 4px 10px 92px 85px rgba(3, 6, 86, 0.75);
+}
+
+.main_text {
+  position: absolute;
+  left: 8%;
+  top: 15%;
+  transform: rotate(-30deg);
+}
+.right_text {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  transform: rotate(40deg);
+}
+
+.main_text b,
+.right_text b {
+  font: 400 10vh "Vibur";
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
+    0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+.main_text b span,
+.right_text b span {
+  animation: blink linear infinite 2s;
+}
+.main_text b span:nth-of-type(2),
+.right_text b span:nth-of-type(2) {
+  animation: blink linear infinite 3s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+.coin_left_img {
+  position: absolute;
+  left: 10%;
+  bottom: 40px;
+}
+
+.coin_left_img img {
+  width: 250px;
+}
+.coin_right_img {
+  position: absolute;
+  right: 10%;
+  bottom: 40px;
+  overflow: hidden;
+  outline: none;
+}
+
+.coin_right_img img {
+  width: 300px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .coin_right_img {
+    right: 3%;
+  }
+  .coin_left_img {
+    left: 3%;
+  }
+  .main_text {
+    left: 3%;
+  }
+  .right_text {
+    right: 3%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .coin_right_img img {
+    width: 200px;
+  }
+  .coin_left_img img {
+    width: 150px;
+  }
+  .main_text b,
+  .right_text b {
+    font: 400 6vh "Vibur";
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .main_text,
+  .right_text {
+    top: 8%;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  /* #wheel canvas {
+    height: 100%;
+  } */
+}
