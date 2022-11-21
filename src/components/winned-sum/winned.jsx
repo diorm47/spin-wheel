@@ -23,12 +23,6 @@ function Winned({ winnedSum, setModal }) {
           <div className="first_salute">
             <img src={salute1} alt="salute1" />
           </div>
-          <div className="first_salute">
-            <img src={salute1} alt="salute1" />
-          </div>
-          <div className="second_salute">
-            <img src={salute2} alt="salute2" />
-          </div>
         </div>
       </div>
     </div>
