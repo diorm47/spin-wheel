@@ -1,32 +1,35 @@
 import React from "react";
 import "./winned.css";
-import bottom_img from "../../assets/anim_bottom.png";
-import falling_coins from "../../assets/anim_falling.png";
+import salute1 from "../../assets/salute1.gif";
+import salute2 from "../../assets/salute2.gif";
 
 function Winned({ winnedSum, setModal }) {
   return (
     <div className="winned_wrapper">
-      <div className="retry_btn">
-        <p onClick={() => setModal(false)}>Retry</p>
-      </div>
-        <div className="falling_coins first_line">
-            <img src={falling_coins} alt="falling_coins" />
+      <div className="winned_texts">
+        <div className="winned_summ">
+          <h1>
+            You win: <span> {winnedSum} </span>
+          </h1>
         </div>
-      <div className="falling_coins second_line">
-        <img src={falling_coins} alt="falling_coins" />
-      </div>
-      <div className="falling_coins thirst_line">
-        <img src={falling_coins} alt="falling_coins" />
-      </div>
+        <div className="retry_btn" onClick={() => setModal(false)}>
+          <p>Spin</p>
+        </div>
 
-      <div className="winned_summ">
-        <h1>
-          You win: <span> {winnedSum} </span>
-        </h1>
-      </div>
-
-      <div className="bottom_img">
-        <img src={bottom_img} alt="bottom_img" />
+        <div className="salutes">
+          <div className="second_salute">
+            <img src={salute2} alt="salute2" />
+          </div>
+          <div className="first_salute">
+            <img src={salute1} alt="salute1" />
+          </div>
+          <div className="first_salute">
+            <img src={salute1} alt="salute1" />
+          </div>
+          <div className="second_salute">
+            <img src={salute2} alt="salute2" />
+          </div>
+        </div>
       </div>
     </div>
   );

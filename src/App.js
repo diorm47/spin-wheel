@@ -59,7 +59,7 @@ const App = () => {
         segments={segments}
         segColors={segColors}
         onFinished={(winner) => onFinished(winner)}
-        primaryColor="#000000bf"
+        primaryColor="black"
         contrastColor="white"
         buttonText=""
         isOnlyOnce={false}
@@ -80,7 +80,7 @@ const App = () => {
         <img src={right_coins} alt="coin_right" />
       </div>
 
-      {!modal || <Winned winnedSum={winnedSum} setModal={setModal}/>}
+      {!modal || <Winned winnedSum={winnedSum} setModal={setModal} />}
     </>
   );
 };
